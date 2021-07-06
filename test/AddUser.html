@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css" integrity="sha512-IgmDkwzs96t4SrChW29No3NXBIBv8baW490zk5aXvhCD8vuZM3yUSkbyTBcXohkySecyzIrUwiF/qV0cuPcL3Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <style type="text/css">
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .input {
+        width: 50vw;
+    }
+    </style>
+</head>
+
+<body>
+    <section class="section">
+        <div class="is-block has-text-centered m-3">
+            <h1 class="title"><span class="has-text-primary">ADD</span> USER + </h1>
+            <h2 class="subtitle is-6 has-text-grey">Use below form to create new account</h2>
+        </div>
+        <div class="container">
+            <form action="/adduser">
+                <!-- name -->
+                <div class="field">
+                    <div class="control">
+                        <lable class="label">
+                            Name
+                        </lable>
+                        <input type="text" class="input" placeholder="ex: piyush">
+                    </div>
+                </div>
+                <!-- email -->
+                <div class="field">
+                    <div class="control">
+                        <lable class="label">
+                            Email
+                        </lable>
+                        <input type="email" class="input" placeholder="ex: example@gmail.com">
+                    </div>
+                </div>
+                <!-- gender -->
+                <div class="field">
+                    <label class="label">Gender </label>
+                    <div class="control">
+                        <label class="radio">
+                            <input type="radio" name="gender">
+                            <span class="m-3">
+                                Male
+                            </span>
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="gender">
+                            <span class="m-3">
+                                
+                            Female
+                            </span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- submit -->
+                <div class="field pt-4">
+                    <div class="control is-expanded">
+                        <input type="submit" class="button is-fullwidth is-medium is-primary has-text-weight-bold" value="S A V E">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>

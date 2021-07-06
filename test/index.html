@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css" integrity="sha512-IgmDkwzs96t4SrChW29No3NXBIBv8baW490zk5aXvhCD8vuZM3yUSkbyTBcXohkySecyzIrUwiF/qV0cuPcL3Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <style type="text/css">
+    .iconify {
+        font-size: 3rem;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .table {
+        width: 70vw;
+    }
+
+    .table thead th {
+        color: ghostwhite;
+    }
+
+    .table tbody td {
+        color: #323030;
+    }
+    </style>
+</head>
+
+<body>
+    <section class="section">
+        <div class="is-block has-text-centered m-3">
+            <h1 class="title">User Management <span class="has-text-primary">System</span>
+            </h1>
+            <button class="button has-icon-left is-dark">
+                <span class="icon is-left">
+                    <span class="iconify" data-icon="fluent:apps-add-in-24-regular" data-inline="false"></span>
+                </span>
+                <span>
+                    Add User
+                </span>
+        </div>
+        </button>
+        <div class="container">
+            <table class="table">
+                <thead class="has-background-primary">
+                    <tr class="has-text-centered">
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Gender</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody class="has-text-centered">
+                    <!-- 1 -->
+                    <tr>
+                        <td>1</td>
+                        <td>Piyush</td>
+                        <td>piyu@gmail</td>
+                        <td>Male</td>
+                        <td>
+                            <button class="button is-success">
+                                <span class="icon">
+                                    <span class="iconify" data-icon="ant-design:edit-outlined" data-inline="false"></span>
+                                </span>
+                            </button>
+                            <button class="button is-danger">
+                                <span class="icon">
+                                    <span class="iconify" data-icon="ant-design:delete-outlined" data-inline="false"></span>
+                                </span>
+                            </button>
+                        </td>
+                        <!-- 2 -->
+                    <tr>
+                        <td>2</td>
+                        <td>Emma</td>
+                        <td>emma@gmail.com</td>
+                        <td>Female</td>
+                        <td>
+                            <button class="button is-success">
+                                <span class="icon">
+                                    <span class="iconify" data-icon="ant-design:edit-outlined" data-inline="false"></span>
+                                </span>
+                            </button>
+                            <button class="button is-danger">
+                                <span class="icon">
+                                    <span class="iconify" data-icon="ant-design:delete-outlined" data-inline="false"></span>
+                                </span>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</body>
+
+</html>
