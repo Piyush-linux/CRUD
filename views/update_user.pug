@@ -1,0 +1,65 @@
+meta(charset='UTF-8')
+meta(name='viewport', content='width=device-width,initial-scale=1')
+title CRUD
+link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css', integrity='sha512-IgmDkwzs96t4SrChW29No3NXBIBv8baW490zk5aXvhCD8vuZM3yUSkbyTBcXohkySecyzIrUwiF/qV0cuPcL3Q==', crossorigin='anonymous', referrerpolicy='no-referrer')
+script(src='https://code.iconify.design/1/1.0.7/iconify.min.js')
+style(type='text/css').
+  
+  .container {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+      }
+  
+      .input {
+          width: 50vw;
+      }
+  
+section.section
+  .is-block.has-text-centered.m-3
+    a.button.is-dark.has-text-weight-bold.mb-3(href="/")
+      icon
+        <span class="iconify" data-icon="akar-icons:arrow-back-thick" data-inline="false"></span>
+    h1.title
+      span.has-text-primary #{header}
+      |  USER +
+    h2.subtitle.is-6.has-text-grey #{mess}
+  .container
+    form(action=link method="POST")
+      //-  name 
+      .field
+        .control
+          lable.label.
+            
+            Name
+            
+          input.input(type='text', name='name', placeholder='ex: piyush')
+      //- email 
+      .field
+        .control
+          lable.label.
+            
+            Email
+            
+          input.input(type='email', name='email', placeholder='ex: example@gmail.com')
+      //-  gender 
+      .field
+        label.label Gender
+        .control
+          label.radio
+            input(type='radio', name='gender', value='male')
+            span.m-3.
+              
+              Male
+              
+          label.radio
+            input(type='radio', name='gender', value='female')
+            span.m-3.
+              
+              Female
+              
+      //-  submit 
+      .field.pt-4
+        .control.is-expanded
+          input.button.is-fullwidth.is-medium.is-primary.has-text-weight-bold(type='submit', value='S A V E')

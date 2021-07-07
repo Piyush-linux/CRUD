@@ -1,5 +1,45 @@
-doctype html5
-head
-	title CRUD
-section
-	h1 welcome
+meta(charset='UTF-8')
+meta(name='viewport', content='width=device-width,initial-scale=1')
+//- <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+//- <meta http-equiv="Cache-Control" content="no-cache"/>
+//- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self';"/>
+title CRUD
+link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css', integrity='sha512-IgmDkwzs96t4SrChW29No3NXBIBv8baW490zk5aXvhCD8vuZM3yUSkbyTBcXohkySecyzIrUwiF/qV0cuPcL3Q==', crossorigin='anonymous', referrerpolicy='no-referrer')
+script(src='https://code.iconify.design/1/1.0.7/iconify.min.js')
+link(rel='stylesheet', type='text/css', href='css/style.css')
+section.section
+  .is-block.has-text-centered.m-3
+    h1.title
+      | User Management 
+      span.has-text-primary System
+    a(href="/adduser")
+      button.button.has-icon-left.is-dark
+        span.icon.is-left
+          span.iconify(data-icon='fluent:apps-add-in-24-regular', data-inline='false')
+        span Add User
+  //- form
+  .container
+    table.table
+      thead.has-background-primary
+        tr.has-text-centered
+          th ID
+          th Name
+          th Email
+          th Gender
+          th Action
+      tbody.has-text-centered
+      each val,index in data
+        tr
+          td=index
+          td=val.name
+          td=val.email
+          td=val.gender
+          td
+            a.button.is-danger.m-1(herf="/updateuser")
+              span.icon
+                span.iconify(data-icon='ant-design:delete-outlined', data-inline='false')
+            a.button.is-success.m-1(href="/updateuser")
+              span.icon
+                span.iconify(data-icon='ant-design:edit-outlined', data-inline='false')
+        //-  1 
+ 

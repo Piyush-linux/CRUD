@@ -1,0 +1,19 @@
+.iconify {
+    font-size: 3rem;
+}
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.table {
+    width: 70vw;
+}
+
+.table thead th {
+    color: ghostwhite;
+}
+
+.table tbody td {
+    color: #323030;
+}
