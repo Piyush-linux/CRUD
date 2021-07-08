@@ -1,22 +1,20 @@
 const router = require("express").Router();
+const render=require("../service/render")
 const controller = require("../controller/controller")
 // get root
-// router.get("/",(req,res)=>{	res.render("index") })
+router.get("/",render.root)
 // get add_user
-router.get("/adduser",(req,res)=>{
-	res.render("update_user",{link:"/adduser",header:"Add",mess:"Use Below Form To Create New Account"})
-})
+router.get("/adduser",render.adduser)
 // get upd_user
-router.get("/updateuser",(req,res)=>{
-	res.render("update_user",{link:"/updateuser",header:"Update",mess:"Update Your Current Account"})
-})
+router.get("/updateuser",render.updateuser)
 
 // get data
-router.get("/",controller.read)
-// post data
-router.post("/adduser",controller.create)
+router.get("/api/user",controller.read)
+// post data 
+router.post("/api/user",controller.create)
 // update data
-router.put("/updateuser/:id",controller.update)
+router.put("/api/user/:id",controller.update)
 // delete data
+router.delete("/api/user/:id",controller.delete)
 
 module.exports = router;
