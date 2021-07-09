@@ -18,8 +18,8 @@ app.use(morgan("tiny"))
 connectDB();
 // req data
 app.use(express.static(path.resolve(__dirname,"public")))
-app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 // template engine
 app.set("view engine","pug")
 

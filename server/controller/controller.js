@@ -38,6 +38,7 @@ exports.read = async (req, res) => {
 exports.update = async (req, res) => {
     try {
         let id = req.params.id
+        console.log(id)
         let usr = await user.findByIdAndUpdate(id,{
             name: req.body.name,
             email:req.body.email,
@@ -54,10 +55,11 @@ exports.update = async (req, res) => {
 // dalate data
 exports.delete = async (req, res) => {
     try {
-        let id = req.params.id
+        let id = req.body.id
+        console.log(id)
         let usr = await user.findOneAndDelete({_id:id})
-        // res.send(usr)
-        res.redirect("/")
+        res.status(200).send("deleted")
+        // res.redirect("/")
     } catch (err) {
         console.log(err)
         res.status(400).send(err)

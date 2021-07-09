@@ -30,11 +30,9 @@ section.section
       //-  name 
       .field
         .control
-          lable.label.
-            
-            Name
-            
+          lable.label Name
           input.input(type='text', name='name', placeholder='ex: piyush' , value=data.name)
+          input.input(type='hidden', name='id' , value=data._id)
       //- email 
       .field
         .control
@@ -42,7 +40,7 @@ section.section
             
             Email
             
-          input.input(type='email', name='email', placeholder='ex: example@gmail.com')
+          input.input(type='email', name='email', placeholder='ex: example@gmail.com' , value=data.email)
       //-  gender 
       .field
         label.label Gender

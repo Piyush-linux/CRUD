@@ -13,7 +13,7 @@ router.get("/api/user",controller.read)
 // post data 
 router.post("/api/user",controller.create)
 // update data
-router.put("/api/user/:id",controller.update)
+router.post("/api/user/:id",controller.update)
 // delete data
 router.delete("/api/user/:id",controller.delete)
 
