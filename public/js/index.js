@@ -1,5 +1,6 @@
 let del = document.querySelectorAll(".del")
-
+let server_host ="https://piyush-crud.herokuapp.com"
+let local_host ="https://localhost:3000"
 /*del.map((x)=>{
 	x.onclick=()=>{
 		console.log('delete')
@@ -17,14 +18,14 @@ del.forEach((ele, i) => {
 
 let req = async (id) => {
     try {
-        let url = `http://localhost:3000/api/user/${id}`
+        let url = `${server_host}/api/user/${id}`
         let del = await fetch(url, {
             method: 'delete',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ id: id, })
         })
         console.log(del)
-        document.location.href = "http://localhost:3000/";
+        document.location.href = server_host;
     } catch (err) {
         console.log(err)
     }
