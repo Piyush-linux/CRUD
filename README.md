@@ -89,3 +89,19 @@ package.json
     - sevices/render.js exp.root > render()
     - render: fetch through api with axios
     - all user > PUG iterate with data | update user | create user
+    1. GET /
+        - get data from api
+        - render in loop in pug with usr.id
+    2. POST /add_user
+        - insert data to api
+        - redirect to /
+    3. PUT /api/:id
+        - get qry id
+        - find in api
+        - upt to db
+        - redirect /
+    4. DELETE /api/:id
+        - get qry id
+        - find in db
+        - del to db
+        - redirect /
