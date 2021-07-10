@@ -6,7 +6,7 @@ router.get("/",render.root)
 // get add_user
 router.get("/adduser",render.adduser)
 // get upd_user
-router.get("/updateuser",render.updateuser)
+router.get("/updateuser/:id",render.updateuser)
 
 // get data
 router.get("/api/user",controller.read)

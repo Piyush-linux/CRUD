@@ -16,10 +16,10 @@ exports.updateuser = async (req, res) => {
     try {
         // let d = await axios.get("http://localhost:3000/api/user/", { params: { id: qry } })
         let upt = {}
-        let qry = req.query.id
+        let qry = req.params.id
 
         // get usr
-        let data = await axios("http://localhost:3000/api/user/")
+        let data = await axios(`${server_host}/api/user/`)
         // find usr
         for (let key in data.data) {
             if(data.data[key]._id == qry){
