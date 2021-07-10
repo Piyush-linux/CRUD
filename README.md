@@ -105,3 +105,7 @@ package.json
         - find in db
         - del to db
         - redirect /
+5. Deployment
+    - ! Replace local_host with server_host for API call
+    - https://localhost:3000 with https://website.com"
+    - git push with only bash for extra prevention
