@@ -1,7 +1,9 @@
 const axios = require("axios")
+let server_host ="https://piyush-crud.herokuapp.com"
+let local_host ="https://localhost:3000"
 // GET /
 exports.root = async (req, res) => {
-    let data = await axios.get("https://piyush-crud.herokuapp.com/api/user/")
+    let data = await axios.get(`${server_host}/api/user/`)
     // console.log(data)
     res.render("index", { data: data.data })
 }
