@@ -1,7 +1,7 @@
 const axios = require("axios")
 // GET /
 exports.root = async (req, res) => {
-    let data = await axios.get("/api/user/")
+    let data = await axios.get(`http://localhost:${process.env.PORT}/api/user/`)
     // console.log(data)
     res.render("index", { data: data.data })
 }
